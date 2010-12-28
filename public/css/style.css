@@ -1,0 +1,191 @@
+
+ /* Primary Styles
+    Author: Super High Fives
+ */
+
+/*	Default 8-column layout
+	60 px columns, 24 px gutters, 60 px margins, 768 px total
+	---------------------------------------------------------
+	1     2      3      4      5      6      7      8     
+	60px  144px  228px  312px  396px  480px  564px  648px	*/
+
+
+body {
+	background:#000;
+	color:#fff;
+	width:648px;
+	-webkit-tap-highlight-color: rgb(255,255,0);
+	margin:0 auto;
+}
+
+div#container {
+	display:block;
+	position:absolute;
+	min-height:100%;
+	width:100%;
+	top:0;
+	left:0;
+}
+
+header h1 {
+	background: url('../images/logos/logo_awwsome_1280.png') no-repeat bottom;
+	width: 553px;
+	height: 286px;
+	margin:0 auto;
+	padding-top:80px;
+}
+
+header h1 a {
+	width:100%;
+	height:100%;
+	display:block;
+}
+
+div#ruby {
+	display:block;
+	margin-bottom:100px;
+	width:400px;
+	position:absolute;
+	top:20px;
+	left:20px;
+	border:1px solid #000;
+	padding:20px;
+}
+
+div#main {
+	display:block;
+	margin-bottom:100px;
+}
+
+div#main form {
+	padding:50px 0 50px 0;
+	width:550px;
+	text-align:center;
+	margin:0 auto;
+	position:relative;
+}
+
+div#main form input[type=url] {
+	font-family:"Baskerville", serif;
+	padding:8px 25px 8px 25px;
+	text-align:center;
+	color:#fe4a9e;
+	font-style:italic;
+	-moz-border-radius:5px;
+	border-radius:5px;
+	border: 1px solid #ccc;
+	width:500px;
+}
+
+	div#main form input[type=url].example {
+		color:#aaa;
+	}
+	
+	div#main form div {
+	    position: absolute;
+	    text-align: center;
+	    width: 550px;
+		left:0;
+		margin-top:-5px;
+		color:#fff;
+		font-size:0.75em;
+		background: url('../images/icons/tooltip.png') top center no-repeat;
+	}
+	
+	div#main form div label.error {
+		margin-top:10px;
+		background:#fe4a9e;
+		-moz-border-radius:5px;
+		border-radius:5px;
+		padding:2px 5px 2px 5px;
+	}
+
+div#main form input[type=submit] {
+	width:25px;
+	height:25px;
+	background: url('../images/icons/arrow.png') no-repeat;
+	text-indent:-9999em;
+	border:none;
+	font-size:0;
+	line-height:0;
+	position:absolute;
+	top:50%;
+	right:0;
+	margin:-14px 0 0 0;
+}
+
+footer {
+	text-align:center;
+	width:100%;
+}
+
+footer {
+	position:absolute;
+	display:block;
+	bottom:0;
+	height:50px;
+}
+
+footer a.superhighfives {
+	background: url('../images/logos/logo_superhighfives.png') no-repeat;
+	width: 194px;
+	height: 24px;
+	margin:0 auto;
+}
+
+a.image {
+	display:block;
+	text-indent:-9999em;
+}
+
+::selection {
+	background: rgb(255,255,0);
+}
+
+::-moz-selection {
+	background: rgb(255,255,0);
+}
+
+/*	Typography presets
+	------------------	*/
+
+.gigantic {
+	font-size: 123px;
+	line-height: 132px;
+	letter-spacing: -2px;
+}
+
+.huge, h1 {
+	font-size: 76px;
+	line-height: 84px;
+	letter-spacing: -2px;
+}
+
+.large, h2 {
+	font-size: 46px;
+	line-height: 48px;
+	letter-spacing: -1px;
+}
+
+.big, h3 {
+	font-size: 29px;
+	line-height: 36px;
+}
+
+.normal, body {
+	font: 18px/24px Palatino, Constantia, "Palatino Linotype", serif;
+}
+
+.small {
+	font-size: 13px;
+	line-height: 18px;
+} 
+
+/*	Supersized presets
+	------------------	*/
+
+#background {
+	display:none;
+    position:fixed;
+	z-index:-5;
+}

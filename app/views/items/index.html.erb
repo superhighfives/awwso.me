@@ -1,0 +1,34 @@
+<div id="main">
+	<form action="" method="get" accept-charset="utf-8">
+		<input class="url example required" name="url" type="url" value="Enter a URL to shorten">
+		<input class="submit" type="submit" value="Submit">
+	</form>
+</div>
+
+<div id="ruby">
+	<h1>Listing items</h1>
+
+	<table>
+	  <tr>
+	    <th>Identifier</th>
+	    <th>Location</th>
+	    <th></th>
+	    <th></th>
+	    <th></th>
+	  </tr>
+
+	<% @items.each do |item| %>
+	  <tr>
+	    <td><%= item.identifier %></td>
+	    <td><%= item.location %></td>
+	    <td><%= link_to 'Show', item %></td>
+	    <td><%= link_to 'Edit', edit_item_path(item) %></td>
+	    <td><%= link_to 'Destroy', item, :confirm => 'Are you sure?', :method => :delete %></td>
+	  </tr>
+	<% end %>
+	</table>
+
+	<br />
+
+	<%= link_to 'New Item', new_item_path %>
+</div>
