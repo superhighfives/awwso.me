@@ -14,12 +14,14 @@
 	<meta name="author" content="Super High Fives">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<%= favicon_link_tag "favicon.ico" %>
-	<link rel="apple-touch-icon" href="apple-touch-icon.png">
+	<%= favicon_link_tag "/favicon.ico" %>
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-	<%= stylesheet_link_tag "reset" %>
-	<%= stylesheet_link_tag "style" %>
-	<%= javascript_include_tag "libs/modernizr-1.6.min.js" %>
+	<%= stylesheet_link_tag "/css/reset" %>
+	<%= stylesheet_link_tag "/css/style" %>
+	<%= javascript_include_tag "/js/libs/modernizr-1.6.min.js" %>
+	
+
 
 </head>
 
@@ -37,20 +39,20 @@
 		</footer>
 	</div>
 	
-	<%= image_tag("layout/background.jpg", :size => "1280x768", :alt => "Background", :id => "background") %>
+	<%= image_tag("/images/layout/background.jpg", :size => "1280x768", :alt => "Background", :id => "background") %>
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js"></script>
 	<script>!window.jQuery && document.write(unescape('%3Cscript src="js/libs/jquery-1.4.2.js"%3E%3C/script%3E'))</script>
   
  	
-	<%= javascript_include_tag "mylibs/jquery.fullscreenr.js" %>
-	<%= javascript_include_tag "mylibs/jquery.validate.pack.js" %>
-	<%= javascript_include_tag "plugins.js" %>
-	<%= javascript_include_tag "script.js" %>
+	<%= javascript_include_tag "/js/mylibs/jquery.fullscreenr.js" %>
+	<%= javascript_include_tag "/js/mylibs/jquery.validate.pack.js" %>
+	<%= javascript_include_tag "/js/plugins.js" %>
+	<%= javascript_include_tag "/js/script.js" %>
   
 
 	<!--[if lt IE 7 ]>
-		<%= javascript_include_tag "libs/dd_belatedpng.js" %>
+		<%= javascript_include_tag "js/libs/dd_belatedpng.js" %>
 		<script> DD_belatedPNG.fix('img, .png_bg'); </script>
 	<![endif]-->
 
