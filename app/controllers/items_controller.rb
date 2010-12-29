@@ -14,7 +14,7 @@ class ItemsController < ApplicationController
   # GET /items/1.xml
   def show
     @item = Item.find_by_id(Base58.decode(params[:id]))
-    @identifier = Base58.decode(params[:id])
+    @identifier = params[:id]
 
     respond_to do |format|
       format.html # show.html.erb
