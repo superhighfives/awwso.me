@@ -6,6 +6,9 @@ Awwsome = {
 	
 	initalize: function()
 	{	
+		// Make all Awwsome links open in a new window
+		$("a[href^='http']").attr("target", "_blank");
+		
 		// Set up fullscreen background		
 		$.fn.fullscreenr({
 			width:1280,
@@ -14,7 +17,7 @@ Awwsome = {
 		});
 		
 		// Fade in fullscreen background
-		$('img#background').fadeIn(500);
+		$("img#background").fadeIn(500);
 		
 		Awwsome.setupURL();
 		

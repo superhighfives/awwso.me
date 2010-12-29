@@ -1,17 +1,9 @@
-<div id="ruby">
-	<p id="notice"><%= notice %></p>
+<!-- Show -->
 
-	<p>
-	  <b>Identifier:</b>
-	  <%= @item.identifier %>
-	</p>
-
-	<p>
-	  <b>Location:</b>
-	  <%= @item.location %>
-	</p>
-
-
-	<%= link_to 'Edit', edit_item_path(@item) %> |
-	<%= link_to 'Back', items_path %>
+<div id="main">
+	<a href="http://awwso.me/u/<%= @identifier %>" class="location"><%= @item.location.gsub('http://', '').gsub('https://', '').strip %></a>
+	
+	<div class="identifier">
+		<span>http://awwso.me/u/<%= @identifier %></span>
+	</div>
 </div>

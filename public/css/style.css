@@ -27,6 +27,10 @@ div#container {
 	left:0;
 }
 
+header {
+	padding-bottom:50px;
+}
+
 header h1 {
 	background: url('../images/logos/logo_awwsome_1280.png') no-repeat bottom;
 	width: 553px;
@@ -52,20 +56,18 @@ div#ruby {
 	padding:20px;
 }
 
-div#main {
+div#main,
+div#main form {
+	margin:0 auto;
+	width:550px;
+	position:relative;
+	text-align=:center;
 	display:block;
 	margin-bottom:100px;
 }
 
-div#main form {
-	padding:50px 0 50px 0;
-	width:550px;
-	text-align:center;
-	margin:0 auto;
-	position:relative;
-}
-
-div#main form input[type=url] {
+div#main form input[type=url],
+div#main a.location {
 	font-family:"Baskerville", serif;
 	padding:8px 25px 8px 25px;
 	text-align:center;
@@ -75,13 +77,17 @@ div#main form input[type=url] {
 	border-radius:5px;
 	border: 1px solid #ccc;
 	width:500px;
+	display:block;
+	background:#fff;
+	margin:0 auto;
 }
 
 	div#main form input[type=url].example {
 		color:#aaa;
 	}
 	
-	div#main form div {
+	div#main form div,
+	div#main div.identifier {
 	    position: absolute;
 	    text-align: center;
 	    width: 550px;
@@ -90,14 +96,22 @@ div#main form input[type=url] {
 		color:#fff;
 		font-size:0.75em;
 		background: url('../images/icons/tooltip.png') top center no-repeat;
+		display:block;
 	}
 	
-	div#main form div label.error {
+	div#main div.highlight {
+		background:#000;
+	}
+	
+	div#main form div label.error,
+	div#main div.identifier span {
 		margin-top:10px;
 		background:#fe4a9e;
 		-moz-border-radius:5px;
 		border-radius:5px;
 		padding:2px 5px 2px 5px;
+		color:#fff;
+		display:block;
 	}
 
 div#main form input[type=submit] {
@@ -139,11 +153,13 @@ a.image {
 }
 
 ::selection {
-	background: rgb(255,255,0);
+	background: #000;
+	color:#fff;
 }
 
 ::-moz-selection {
-	background: rgb(255,255,0);
+	background: #000;
+	color:#fff;
 }
 
 /*	Typography presets

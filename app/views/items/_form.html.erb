@@ -8,18 +8,11 @@
         <li><%= msg %></li>
       <% end %>
       </ul>
+
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :identifier %><br />
-    <%= f.text_field :identifier %>
-  </div>
-  <div class="field">
-    <%= f.label :location %><br />
-    <%= f.text_field :location %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <%= f.text_field :location, :value => "Enter a URL to shorten", :type => "url", :class => "url" %>
+  <%= f.submit %>
+
 <% end %>
