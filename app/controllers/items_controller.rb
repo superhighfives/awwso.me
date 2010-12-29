@@ -26,7 +26,7 @@ class ItemsController < ApplicationController
   # GET /items/1.xml
   def redirect
     @item = Item.find_by_id(Base58.decode(params[:id]))
-    redirect_to(@item[:location])
+    redirect_to @item[:location]
   end
 
   # GET /items/new
