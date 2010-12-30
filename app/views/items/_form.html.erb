@@ -1,7 +1,13 @@
 <%= form_for(@item) do |f| %>
+
+  <%= f.text_field :location, :value => "Enter a URL to shorten", :type => "url", :class => "url required" %>
+  <%= f.submit %>
+
+  <div id="error_validation"></div>
+
   <% if @item.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@item.errors.count, "error") %> prohibited this item from being saved:</h2>
+      <span class="heading">Looks like we have a micro issue:</span>
 
       <ul>
       <% @item.errors.full_messages.each do |msg| %>
@@ -11,8 +17,5 @@
 
     </div>
   <% end %>
-
-  <%= f.text_field :location, :value => "Enter a URL to shorten", :type => "url", :class => "url required" %>
-  <%= f.submit %>
 
 <% end %>

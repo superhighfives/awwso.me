@@ -49,7 +49,7 @@ Awwsome = {
 		});
 		
 		$("form").validate({
-			wrapper: "div",
+			errorLabelContainer: "#error_validation",
 			onfocusout: false
 		});
 		

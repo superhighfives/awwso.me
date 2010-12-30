@@ -86,7 +86,7 @@ div#main a.location {
 		color:#aaa;
 	}
 	
-	div#main form div,
+	div#main form div#error_validation,
 	div#main div.identifier {
 	    position: absolute;
 	    text-align: center;
@@ -103,7 +103,7 @@ div#main a.location {
 		background:#000;
 	}
 	
-	div#main form div label.error,
+	div#main form div#error_validation label.error,
 	div#main div.identifier span {
 		margin-top:10px;
 		background:#fe4a9e;
@@ -112,6 +112,11 @@ div#main a.location {
 		padding:2px 5px 2px 5px;
 		color:#fff;
 		display:block;
+	}
+	
+	div#main form div#error_explanation {
+		padding-top:20px;
+		font-size:0.75em;
 	}
 
 div#main form input[type=submit] {
@@ -123,7 +128,7 @@ div#main form input[type=submit] {
 	font-size:0;
 	line-height:0;
 	position:absolute;
-	top:50%;
+	top:20px;
 	right:0;
 	margin:-14px 0 0 0;
 }
