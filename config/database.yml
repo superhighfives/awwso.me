@@ -3,10 +3,10 @@
 development:
   adapter: mysql2
   encoding: utf8
-  database: v2km_short_dev
+  database: <database>
   pool: 10
-  username: v2km_short
-  password: 5qVv74SdUqzA85DE
+  username: <user>
+  password: <pw>
   host: 127.0.0.1
 
 # Warning: The database defined as "test" will be erased and
@@ -21,8 +21,8 @@ test:
 production:
   adapter: mysql2
   encoding: utf8
-  database: v2km_short
+  database: <database>
   pool: 10
-  username: v2km_short
-  password: 5qVv74SdUqzA85DE
+  username: <user>
+  password: <pw>
   host: 127.0.0.1
