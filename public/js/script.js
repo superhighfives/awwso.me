@@ -68,7 +68,7 @@ Awwsome = {
 	clearInput: function(object)
 	{
 		$(object).removeClass("example");
-		$(object).val("http://");
+		$(object).val("");
 	}
 	
 }

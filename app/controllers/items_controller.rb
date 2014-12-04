@@ -13,7 +13,8 @@ class ItemsController < ApplicationController
   # GET /items/1
   # GET /items/1.xml
   def show
-    @item = Item.find_by_id(Base58.decode(params[:id]))
+    @item = Item.find_by(id: Base58.decode(params[:id]))
+    @qr = RQRCode::QRCode.new((CONFIG['use_https'] ? "https://" : "http://") + CONFIG['base_url'] + "/" + Base58.encode(@item.id)).to_img.resize(150, 150).to_data_url
     @identifier = params[:id]
 
     respond_to do |format|
@@ -25,8 +26,12 @@ class ItemsController < ApplicationController
   # GET /items/1
   # GET /items/1.xml
   def redirect
-    @item = Item.find_by_id(Base58.decode(params[:id]))
-    redirect_to @item[:location]
+    @item = Item.find_by(id: Base58.decode(params[:id]))
+    if @item
+      redirect_to @item[:location]
+    else
+      redirect_to (CONFIG['use_https'] ? "https://" : "http://") + CONFIG['base_url']
+    end
   end
 
   # GET /items/new
@@ -43,7 +48,7 @@ class ItemsController < ApplicationController
   # POST /items
   # POST /items.xml
   def create
-    @item = Item.new(params[:item])
+    @item = Item.new(permitted_params)
 
     respond_to do |format|
       if @item.save
@@ -54,6 +59,13 @@ class ItemsController < ApplicationController
         format.xml  { render :xml => @item.errors, :status => :unprocessable_entity }
       end
     end
+  end
+
+  private
+
+  # set up permitted params from form
+  def permitted_params
+    params.require(:item).permit(:location)
   end
 
 end

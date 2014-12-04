@@ -59,11 +59,12 @@ div#ruby {
 div#main,
 div#main form {
 	margin:0 auto;
-	width:550px;
+	width:750px;
 	position:relative;
 	text-align=:center;
 	display:block;
 	margin-bottom:100px;
+	word-wrap: break-word;
 }
 
 div#main form input[type=url],
@@ -76,7 +77,7 @@ div#main a.location {
 	-moz-border-radius:5px;
 	border-radius:5px;
 	border: 1px solid #ccc;
-	width:500px;
+	width:700px;
 	display:block;
 	background:#fff;
 	margin:0 auto;
@@ -90,7 +91,7 @@ div#main a.location {
 	div#main div.identifier {
 	    position: absolute;
 	    text-align: center;
-	    width: 550px;
+	    width: 750px;
 		left:0;
 		margin-top:-5px;
 		color:#fff;
@@ -113,6 +114,12 @@ div#main a.location {
 		color:#fff;
 		display:block;
 	}
+
+        div#main p.link {
+		font-size: 34px;
+		font-weight: bold;
+		margin-top: 10px;
+        }
 	
 	div#main form div#error_explanation {
 		padding-top:20px;
