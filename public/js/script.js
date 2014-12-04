@@ -52,7 +52,7 @@ Awwsome = {
 			invalidHandler: function(form) {
 				console.log(form);
 				location_value = $('#item_location').val();
-				if ((location_value.search("http") == -1) && (location_value.search("https") == -1) ) {
+				if ((location_value.search("http") == -1) && (location_value.search("https") == -1) && (location_value != "")) {
 					$('#item_location').val("http://" + location_value);
 				}
 				if($('#item_location').valid()) {
