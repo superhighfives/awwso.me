@@ -1,9 +1,9 @@
 <!-- Show -->
-
 <div id="main">
-	<a href="http://awwso.me/u/<%= @identifier %>" class="location"><%= @item.location.gsub('http://', '').gsub('https://', '').strip %></a>
+	<a href="<%= (CONFIG['use_https'] ? "https://" : "http://") + CONFIG['base_url'] + "/" + @identifier %>" class="location"><%= @item.location.gsub('http://', '').gsub('https://', '').strip %></a>
 	
 	<div class="identifier">
-		<span>http://awwso.me/u/<%= @identifier %></span>
+		<span><p class="link"><%= (CONFIG['use_https'] ? "https://" : "http://") + CONFIG['base_url'] + "/" + @identifier %></p><br />
+		<%= image_tag @qr %></span>
 	</div>
 </div>

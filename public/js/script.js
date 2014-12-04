@@ -49,14 +49,24 @@ Awwsome = {
 		});
 		
 		$("form").validate({
+			invalidHandler: function(form) {
+				console.log(form);
+				location_value = $('#item_location').val();
+				if ((location_value.search("http") == -1) && (location_value.search("https") == -1) && (location_value != "")) {
+					$('#item_location').val("http://" + location_value);
+				}
+				if($('#item_location').valid()) {
+					form.submit();
+				}
+			},
 			errorLabelContainer: "#error_validation",
-			onfocusout: false
+			onfocusout: false,
+			messages: {
+				required: "Just enter a URL",
+				url: "We'll need a valid URL, including the http bit"
+			},
 		});
 		
-		jQuery.extend(jQuery.validator.messages, {
-		    required: "Just enter a URL",
-		    url: "We'll need a valid URL, including the http bit"
-		});
 	},
 	
 	resetInput: function(object, value)
@@ -68,7 +78,7 @@ Awwsome = {
 	clearInput: function(object)
 	{
 		$(object).removeClass("example");
-		$(object).val("http://");
+		$(object).val("");
 	}
 	
 }

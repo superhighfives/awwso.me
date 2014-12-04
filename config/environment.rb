@@ -1,7 +1,5 @@
-# Load the rails application
+# Load the Rails application.
 require File.expand_path('../application', __FILE__)
 
-# Initialize the rails application
-Awwsome::Application.initialize!
-
-require 'base58'
+# Initialize the Rails application.
+Rails.application.initialize!
